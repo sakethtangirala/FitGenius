@@ -77,6 +77,11 @@ export default function WorkoutLogScreen() {
       return;
     }
 
+    if (isNaN(Number(workoutDuration))) {
+      setError('Workout duration must be a number');
+      return;
+    }
+
     console.log('User object:', user); // Log the user object
     console.log('User UID:', user?.uid); // Log the user UID
 
